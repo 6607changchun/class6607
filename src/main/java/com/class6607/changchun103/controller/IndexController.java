@@ -1,5 +1,6 @@
 package com.class6607.changchun103.controller;
 
+import com.class6607.changchun103.beans.Expression;
 import com.class6607.changchun103.config.TrainConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,8 +19,13 @@ public class IndexController {
 
     @RequestMapping("/name")
     public String getName(Model model){
-        System.out.println("name");
         model.addAttribute("name",trainConfig.getName());
         return "/thymeleaf/index";
+    }
+
+    @RequestMapping("/expr")
+    public String getExpr(Model model){
+        model.addAttribute("expr",new Expression("test Expression","op1"));
+        return "/thymeleaf/expression";
     }
 }

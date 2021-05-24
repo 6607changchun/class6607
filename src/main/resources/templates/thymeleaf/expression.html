@@ -5,9 +5,9 @@
     <title>Title</title>
 </head>
 <body>
-    <p th:text="${name}">this is a name.</p>
-    <div>
-        <a href="./index.html" th:href="@{/expr}">expr test</a>
+    <div th:object="${expr}">
+        <div th:text="*{title}"></div>
+        <div th:text="*{ops}"></div>
     </div>
 </body>
 </html>
