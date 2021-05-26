@@ -10,4 +10,6 @@ import org.springframework.context.annotation.Configuration;
 @Getter@Setter
 public class TrainConfig {
     private String name;
+    private String type;
+    private Integer maxSpeed;
 }
