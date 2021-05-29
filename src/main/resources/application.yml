@@ -1,8 +1,0 @@
-train:
-  name: 轩酱
-  type: CR400BF(/-A/-B)
-  maxSpeed: 400
-train2:
-  name: 若燕
-  type: SS8
-  maxSpeed: 240

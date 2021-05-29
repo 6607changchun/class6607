@@ -4,13 +4,14 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Train {
-    private Integer tid;
-    private String typeName;
-    private Integer maxSpeed;
-    private String publicName;
-    private Factory factory;
+public class Factory {
+    private Integer fid;
+    private String factoryName;
+    private String factoryLocation;
+    private List<Train> trains;
 }
