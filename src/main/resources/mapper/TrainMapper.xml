@@ -1,0 +1,20 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybtis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.class6607.changchun103.dao.TrainDao">
+    <resultMap id="train-factory" type="com.class6607.changchun103.beans.Train">
+        <id property="tid" column="tid"/>
+        <result property="typeName" column="typeName"/>
+        <result property="maxSpeed" column="maxSpeed"/>
+        <result property="publicName" column="publicName"/>
+        <association property="factory" javaType="com.class6607.changchun103.beans.Factory">
+            <id property="fid" column="fid"/>
+            <result property="factoryName" column="factoryName"/>
+            <result property="factoryLocation" column="factoryLocation"/>
+        </association>
+    </resultMap>
+    <select id="getAllTrains" resultMap="train-factory">
+        select tid,typename,maxSpeed,publicName,f.fid,factoryName,factoryLocation
+        from train t inner join factory f on t.fid = f.fid
+    </select>
+</mapper>

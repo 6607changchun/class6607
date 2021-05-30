@@ -2,24 +2,14 @@ package com.class6607.changchun103.dao;
 
 import com.class6607.changchun103.beans.Factory;
 import com.class6607.changchun103.beans.Train;
+import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
-public class FactoryDao {
+@Mapper
+public interface FactoryDao {
 
-
-    public List<Factory> getAllFactory(){
-
-        return null;
-    }
-
-    public Factory getFactory(Integer fid){
-
-        return null;
-    }
-
-    public List<Train> getTrains(Integer fid){
-
-        return null;
-    }
+    List<Factory> getAllFactory();
+    Factory getFactory(Integer fid);
+    List<Train> getTrains(Integer fid);
 }
