@@ -3,10 +3,10 @@
         "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybtis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-<!--    <settings>-->
-<!--        <setting name="aggressive-lazy-loading" value="false"/>-->
-<!--        <setting name="lazy-loading-enabled" value="true"/>-->
-<!--    </settings>-->
+    <settings>
+        <setting name="aggressiveLazyLoading" value="false"/>
+        <setting name="lazyLoadingEnabled" value="true"/>
+    </settings>
     <typeAliases>
         <package name="com.class6607.changchun103.beans"/>
     </typeAliases>

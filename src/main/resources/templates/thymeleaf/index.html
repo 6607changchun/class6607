@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script th:inline="javascript">
+        var s = [[${trains}]]
+        var obj = JSON.parse(s)
+        console.log(obj)
+    </script>
 </head>
 <body>
     <p th:text="${trains}">these are all trains.</p>
