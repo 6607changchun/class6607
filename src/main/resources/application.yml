@@ -1,8 +1,9 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/train?serverTimezone=CST
-    username: train
-    password: train
+    database1:
+      jdbc-url: jdbc:mysql://localhost:3306/train?serverTimezone=CST
+      username: train
+      password: train
 mybatis:
   config-location: classpath:config.xml
   mapper-locations: mapper/TrainMapper.xml,mapper/FactoryMapper.xml
