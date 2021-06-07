@@ -4,6 +4,7 @@ import com.class6607.changchun103.beans.Factory;
 import com.class6607.changchun103.beans.Train;
 import org.apache.ibatis.annotations.*;
 import org.apache.ibatis.mapping.FetchType;
+import org.springframework.cache.annotation.Cacheable;
 
 import java.util.List;
 
@@ -24,6 +25,7 @@ public interface TrainDao {
             }
     )
     @Select("select tid,typename,maxSpeed,publicName,fid from train")
+    @Cacheable(value = "trains")
     List<Train> getAllTrains();
     Train getTrain(Integer tid);
     Factory getFactory(Integer tid);
