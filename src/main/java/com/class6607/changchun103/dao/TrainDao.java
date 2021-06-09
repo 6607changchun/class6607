@@ -25,7 +25,7 @@ public interface TrainDao {
             }
     )
     @Select("select tid,typename,maxSpeed,publicName,fid from train")
-    @Cacheable(value = "trains")
+//    @Cacheable(value = "trains")
     List<Train> getAllTrains();
     Train getTrain(Integer tid);
     Factory getFactory(Integer tid);
